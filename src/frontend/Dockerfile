@@ -26,7 +26,7 @@ COPY . .
 ARG SKAFFOLD_GO_GCFLAGS
 RUN go build -gcflags="${SKAFFOLD_GO_GCFLAGS}" -o /go/bin/frontend .
 
-FROM alpine:3.19.1@sha256:c5b1261d6d3e43071626931fc004f70149baeba2c8ec672bd4f27761f8e1ad6b as release
+FROM alpine:3.19.1@sha256:a0264d60f80df12bc1e6dd98bae6c43debe6667c0ba482711f0d806493467a46 as release
 RUN apk add --no-cache ca-certificates \
     busybox-extras net-tools bind-tools
 WORKDIR /src
